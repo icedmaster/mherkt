@@ -21,6 +21,9 @@
 	(init view-caption width height)
 	(field (frame (new frame% [label view-caption] [width width] [height height])))
 	(field (canvas (new gl-canvas% [parent frame] [style '(gl)])))
-	(send frame show #t)
+    (define/public (with-gl-context f)
+      (send canvas with-gl-context f))
+    (define/public (show)
+      (send frame show #t))
 	(super-new)))
 
