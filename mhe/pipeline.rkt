@@ -11,7 +11,7 @@
   ([topology #:mutable]))
 
 (struct rasterization-state
-  ([cull-mode #:mutable]))
+  ([culling-enabled #:mutable]))
 
 (struct depth-stencil-state
   ([depth-test-enabled #:mutable]

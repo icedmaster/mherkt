@@ -3,7 +3,7 @@
 (provide println)
 
 (define (println . args)
-  (printf (car args) (cdr args))
+  (printf (first args) (second args))
   (newline)
   (flush-output))
 
